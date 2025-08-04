@@ -1,5 +1,5 @@
 name: Hibajelenség
-description: Elakadtál valamelyik demó vagy képzés gyakorlása kapcsán? Itt leírhatod a tapasztalt jelenséget.
+description: Elakadtál valamelyik gyakorlat vagy képzés gyakorlása kapcsán? Itt leírhatod a tapasztalt jelenséget.
 title: "[I]: "
 labels: ["issue", "cloud"]
 assignees:
@@ -34,6 +34,16 @@ body:
         - Egyéb (nem szerepel a listában)
     validations:
       required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Lépések a hiba előidézéséhez
+      description: Írd le lépésről lépésre, mit csináltál
+  - type: input
+    id: browser
+    attributes:
+      label: Böngésző típusa
+      placeholder: pl. Chrome 115 / Safari 17
   - type: checkboxes
     id: public-acknowledgment
     attributes:
