@@ -1,0 +1,44 @@
+name: Hibajelenség
+description: Elakadtál valamelyik demó vagy képzés gyakorlása kapcsán? Itt leírhatod a tapasztalt jelenséget.
+title: "[I]: "
+labels: ["issue", "cloud"]
+assignees:
+  - the1bit
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Köszönöm, hogy írsz! Kérlek, írd le a hibajelenséget minél pontosabban. Csatolj képernyőképet vagy hibaüzenetet is, hogy gyorsabban segíthessünk.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Mi történt?
+      description: Írd le, melyik demóval vagy képzéssel kapcsolatban tapasztaltad a hibát. Pontosan írd le a lépéseket, amik a hibához vezettek.
+      placeholder: |
+        Pl.: „Az Azure VM létrehozásánál nem kaptam vissza jelszót, miután a lab sikeresen elindult.”
+    validations:
+      required: true
+  - type: dropdown
+    id: lab-name
+    attributes:
+      label: Melyik lab során jelentkezett?
+      description: Válaszd ki azt a labot, ahol a hibát tapasztaltad.
+      options:
+        - Azure – Virtuális gép és hálózat
+        - Azure – CloudShell (CLI / PowerShell)
+        - AWS – EC2 és VPC
+        - AWS – IAM és biztonság
+        - Kubernetes – AKS / EKS
+        - Terraform – Alapok
+        - GitHub – Action workflow
+        - Egyéb (nem szerepel a listában)
+    validations:
+      required: true
+  - type: checkboxes
+    id: public-acknowledgment
+    attributes:
+      label: Nyilvánosság tudomásulvétele
+      description: Az alábbi checkbox bejelölése szükséges a hibajelentés beküldéséhez.
+      options:
+        - label: "Tudomásul veszem, hogy minden itt megadott információ nyilvánosan elérhető, és bárki számára hozzáférhető, aki ezt a GitHub repository-t megnyitja."
+          required: true
